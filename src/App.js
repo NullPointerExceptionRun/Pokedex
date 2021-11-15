@@ -11,20 +11,20 @@ function App() {
 
     setLoadMore(data.next)
 
-    function createPokemonObject  (result){
-        result.forEach(async (pokemon) => {
+  
+    function createPokemonObject  (results) {
+        results.forEach(async (pokemon) => {
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
-            const data = res.json()
+            const data = await res.json()
 
           setAllPokemons(currentList => [...currentList, data])
           
-        })
-        
+        })  
     }
     createPokemonObject(data.results)
     await console.log(allPokemons)
   }
-
+  
   useEffect(() => {
     getAllPokemons()
   }, [])
