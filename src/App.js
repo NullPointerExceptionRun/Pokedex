@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="app-container">
-     <h1>Pokemon Evolution</h1>
+     <h1>Pokemon </h1>
      <div className="pokemon-container">
        <div className="all-container">
         { allPokemons.map((pokemon, index) =>
@@ -45,7 +45,7 @@ function App() {
           />
           )}
        </div>
-       <button className="load-more">Carregar Mais</button>
+       <button className="load-more" onClick={() => getAllPokemons()}>Carregar Mais</button>
      </div>
     </div>
   );
