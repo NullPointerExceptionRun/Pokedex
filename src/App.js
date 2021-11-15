@@ -34,7 +34,7 @@ function App() {
      <h1>Pokemon Evolution</h1>
      <div className="pokemon-container">
        <div className="all-container">
-
+        { allPokemons.map(pokemon => <li>{pokemon.name}</li>)}
        </div>
        <button className="load-more">Carregar Mais</button>
      </div>
